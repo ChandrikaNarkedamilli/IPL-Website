@@ -26,7 +26,7 @@ import img5 from  "../images/img5.jpg"
 import img6 from  "../images/img6.jpg"
 import img7 from  "../images/img7.jpg"
 import img8 from  "../images/img8.jpg"
-import { Box, Button, ImageList, ImageListItem, ImageListItemBar, Stack, Typography } from "@mui/material";
+import { Box, Button, colors, ImageList, ImageListItem, ImageListItemBar, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -58,12 +58,13 @@ const HomePage = () => {
 
   return (
     <React.Fragment sx={{width:'100%' }}>
+      <Stack direction='row' spacing={5} alignItems='center' height='760px'>
       <Box width='980px' height='660px' overflow="hidden">
         <Carousel
           responsive={responsive}
           // centerMode={true}
           autoPlay
-          autoPlaySpeed="3000"
+          autoPlaySpeed="2000"
           infinite={true}
           showDots={true}
           swipeable={false}
@@ -97,8 +98,15 @@ const HomePage = () => {
           />
         </Carousel>
       </Box>
+      <Box>
+        <Typography variant="h3" sx={{mt:'-80px',fontWeight:'500'}}>Get Ready for the TATA IPL 2024</Typography><br/>
+        <Typography variant="h6" sx={{fontSize:'18px',color:'#626262', wordBreak:'break-word'}}>Get Live Cricket Scores, Scorecard, Schedules of International</Typography>
+        <Typography variant="h6" sx={{fontSize:'18px',color:'#626262', wordBreak:'break-word'}}>and Domestic cricket matches along with Latest News, Videos and ICC Cricket Rankings</Typography><br/>
+        <Typography variant="h6" sx={{color:"black"}}>Watch live on <Link to='/' style={{color:"#dc5034"}}>jiocinema.in</Link></Typography>
+      </Box>
+      </Stack>
 
-      <Box width='auto' height='auto' sx={{backgroundColor:'white',borderRadius:'60px', padding:'30px', margin:'20px 20px'}}> 
+      <Box width='auto' height='auto' sx={{backgroundColor:'white',borderRadius:'60px', padding:'30px', margin:'8px 20px'}}> 
           <Stack sx={{marginLeft:'90px'}}>
             <Typography variant='h6' sx={{fontWeight:'700'}}>Good Morning!</Typography>
             <Typography variant='body2'sx={{fontSize:'12px'}}>Curated shorts for you</Typography>
